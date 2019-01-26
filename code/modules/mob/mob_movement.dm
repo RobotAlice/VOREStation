@@ -8,27 +8,10 @@
 		return (!mover.density || !density || lying)
 	else
 		return (!mover.density || !density || lying)
-	return
 
 /mob/proc/setMoveCooldown(var/timeout)
 	if(client)
 		client.move_delay = max(world.time + timeout, client.move_delay)
-
-/client/North()
-	..()
-
-
-/client/South()
-	..()
-
-
-/client/West()
-	..()
-
-
-/client/East()
-	..()
-
 
 /client/proc/client_dir(input, direction=-1)
 	return turn(input, direction*dir2angle(dir))
@@ -122,6 +105,7 @@
 	*/
 	return
 
+<<<<<<< HEAD
 //This proc should never be overridden elsewhere at /atom/movable to keep directions sane.
 /atom/movable/Move(newloc, direct)
 	if (direct & (direct - 1))
@@ -176,6 +160,8 @@
 /atom/movable/proc/Moved(atom/oldloc)
 	return
 
+=======
+>>>>>>> 9ff8103... Merge pull request #5636 from kevinz000/pixel_projectiles
 /client/proc/Move_object(direct)
 	if(mob && mob.control_object)
 		if(mob.control_object.density)
